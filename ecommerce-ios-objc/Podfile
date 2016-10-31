@@ -5,6 +5,5 @@ project 'ecommerce-ios-objc'
 target 'ecommerce-ios-objc'
 target 'ecommerce-ios-objcTests'
 
-pod 'AppDynamicsAgent'
 
 platform :ios, '6.0'

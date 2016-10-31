@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <ADEUMInstrumentation/ADEUMInstrumentation.h>
 
 @interface ViewController ()
 
@@ -32,7 +31,6 @@ int noOfItems = 0;
 
 - (void)getHttpCookies:(NSURLResponse*)response
                 forURL:(NSURL*)url {
-    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSDictionary *headers = [(NSHTTPURLResponse*)response allHeaderFields];
     NSArray *cookies =[NSHTTPCookie cookiesWithResponseHeaderFields:headers forURL:url];
     for (int i = 0; i < [cookies count]; i++) {
@@ -45,25 +43,19 @@ int noOfItems = 0;
             routeId = [[cookie properties] objectForKey:NSHTTPCookieValue];
         }
     }
-    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (void)getHttpRequestHeaders:(NSURLRequest*)request {
-    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSDictionary *headers = [(NSMutableURLRequest*)request allHTTPHeaderFields];
     NSLog(@"Request Headers: %@", [headers description]);
-    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (void)getHttpResponseHeaders:(NSURLResponse*)response {
-    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSDictionary *headers = [(NSHTTPURLResponse*)response allHeaderFields];
     NSLog(@"Response Headers: %@", [headers description]);
-    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (void)doHttpGet:(NSURL*)url {
-    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSURLSession *session = [NSURLSession sharedSession];
     
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url
@@ -83,11 +75,9 @@ int noOfItems = 0;
                     NSLog(@"HTTP Status Code: %ld", [(NSHTTPURLResponse*)response statusCode]);
                     [self getHttpResponseHeaders:response];
                 }] resume];
-    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (void)doHttpPost:(NSURL*)url {
-    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSURLSession *session = [NSURLSession sharedSession];
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url
                                                          cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
@@ -114,16 +104,9 @@ int noOfItems = 0;
         [self getHttpCookies:response forURL:url];
         [self getHttpResponseHeaders:response];
     }] resume];
-    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (IBAction)loginClicked:(id)sender {
-    [ADEumInstrumentation leaveBreadcrumb:@"loginClicked"];
-    [ADEumInstrumentation startTimerWithName:loginThruCheckout];
-    
-    [ADEumInstrumentation setUserData: @"Username" value:[[NSUserDefaults standardUserDefaults] objectForKey:@"username"] persist:false];
-    [ADEumInstrumentation setUserData: @"Password" value:[[NSUserDefaults standardUserDefaults] objectForKey:@"password"] persist:false];
-    
     NSString *baseURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"url"];
     NSString *relativeURL = @"/rest/user/login";
     NSURL *url = [NSURL URLWithString:[baseURL stringByAppendingString:relativeURL]];
@@ -131,8 +114,6 @@ int noOfItems = 0;
 }
 
 - (IBAction)getItemsClicked:(id)sender {
-    [ADEumInstrumentation leaveBreadcrumb:@"getItemsClicked"];
-    
     NSString *baseURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"url"];
     NSString *relativeURL = @"/rest/items/all";
     NSURL *url = [NSURL URLWithString:[baseURL stringByAppendingString:relativeURL]];
@@ -140,8 +121,6 @@ int noOfItems = 0;
 }
 
 - (IBAction)addToCartClicked:(id)sender {
-    [ADEumInstrumentation leaveBreadcrumb:@"addToCartClicked"];
-    
     int x = arc4random() % 10;
     noOfItems++;
     
@@ -152,10 +131,6 @@ int noOfItems = 0;
 }
 
 - (IBAction)checkoutClicked:(id)sender {
-    [ADEumInstrumentation leaveBreadcrumb:@"checkoutClicked"];
-    [ADEumInstrumentation reportMetricWithName:@"No of Items" value: noOfItems];
-    [ADEumInstrumentation stopTimerWithName:loginThruCheckout];
-    
     NSString *baseURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"url"];
     NSString *relativeURL = @"/rest/cart/co";
     NSURL *url = [NSURL URLWithString: [baseURL stringByAppendingString:relativeURL]];
@@ -163,8 +138,6 @@ int noOfItems = 0;
 }
 
 - (IBAction)settingsClicked:(id)sender {
-    [ADEumInstrumentation leaveBreadcrumb:@"settingsClicked"];
-    
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
     NSLog(@"ECommerce URL: %@", [standardDefaults objectForKey:@"url"]);

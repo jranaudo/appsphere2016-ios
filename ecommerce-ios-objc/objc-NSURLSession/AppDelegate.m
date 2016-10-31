@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <ADEUMInstrumentation/ADEUMInstrumentation.h>
 
 @interface AppDelegate ()
 
@@ -23,10 +22,6 @@
     
     [self loadAppDefaults];
     
-    [ADEumInstrumentation initWithKey:[[NSUserDefaults standardUserDefaults] objectForKey:@"appKey"]
-                         collectorUrl:[[NSUserDefaults standardUserDefaults] objectForKey:@"collectorUrl"]
-                        enableLogging:true ];
-
     return YES;
 }
 
