@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ecommerce_ios_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-mc-Emo">
+                                <rect key="frame" x="281" y="109" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adr-8Q-qxJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhx-5n-ONb">
+                                <rect key="frame" x="267" y="173" width="67" height="30"/>
+                                <state key="normal" title="Get Items"/>
+                                <connections>
+                                    <action selector="getItemsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g25-RH-b8x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lt-nY-h4q">
+                                <rect key="frame" x="261" y="234" width="79" height="30"/>
+                                <state key="normal" title="Add to Cart"/>
+                                <connections>
+                                    <action selector="addToCartClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGX-Jk-f4T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yl-hY-dDy">
+                                <rect key="frame" x="267" y="294" width="66" height="30"/>
+                                <state key="normal" title="Checkout"/>
+                                <connections>
+                                    <action selector="checkoutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Br3-bu-7oJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoL-J3-mET">
+                                <rect key="frame" x="272" y="358" width="57" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="settingsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpL-eC-lga"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bhx-5n-ONb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Uv-Gm-3aT"/>
+                            <constraint firstItem="5Lt-nY-h4q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3m4-1L-yjs"/>
+                            <constraint firstItem="bNT-mc-Emo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4dy-S4-ain"/>
+                            <constraint firstItem="1Yl-hY-dDy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hE5-RP-Xrf"/>
+                            <constraint firstItem="LoL-J3-mET" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sPj-UI-YUT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

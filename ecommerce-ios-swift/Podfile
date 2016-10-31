@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+project 'ecommerce-ios-swift'
+
+target 'ecommerce-ios-swift'
+target 'ecommerce-ios-swiftTests'
+
+pod 'AppDynamicsAgent'
+
+platform :ios, '8.0'
+
