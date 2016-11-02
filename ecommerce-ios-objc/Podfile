@@ -3,7 +3,5 @@ source 'https://github.com/CocoaPods/Specs.git'
 project 'ecommerce-ios-objc'
 
 target 'ecommerce-ios-objc'
-target 'ecommerce-ios-objcTests'
-
 
 platform :ios, '6.0'

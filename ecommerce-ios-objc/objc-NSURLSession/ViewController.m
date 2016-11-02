@@ -137,11 +137,6 @@ int noOfItems = 0;
     [self doHttpGet:url];
 }
 
-- (IBAction)settingsClicked:(id)sender {
-    
-    *(long*)0 = 0xB16B00B5;
-    
-}
 
 - (IBAction)crashApp:(id)sender {
     
