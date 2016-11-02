@@ -43,11 +43,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onY-mc-KGb">
-                                <frame key="frameInset" minX="272" minY="365" width="57" height="30"/>
+                                <frame key="frameInset" minX="265" minY="365" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings"/>
+                                <state key="normal" title="Crash App"/>
                                 <connections>
-                                    <action selector="settingsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="suB-qu-psz"/>
+                                    <action selector="crashApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XvA-R3-G1g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJG-hm-RN0">

@@ -138,13 +138,15 @@ int noOfItems = 0;
 }
 
 - (IBAction)settingsClicked:(id)sender {
-    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
-    NSLog(@"ECommerce URL: %@", [standardDefaults objectForKey:@"url"]);
-    NSLog(@"EUM Collector: %@", [standardDefaults objectForKey:@"collectorUrl"]);
-    NSLog(@"EUM Key: %@", [standardDefaults objectForKey:@"appKey"]);
-    NSLog(@"Username: %@", [standardDefaults objectForKey:@"username"]);
-    NSLog(@"Password: %@", [standardDefaults objectForKey:@"password"]);
+    *(long*)0 = 0xB16B00B5;
+    
+}
+
+- (IBAction)crashApp:(id)sender {
+    
+    *(long*)0 = 0xB16B00B5;
+    
 }
 
 @end
