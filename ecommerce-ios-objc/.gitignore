@@ -15,7 +15,6 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.pbxproj
 
 # Project-specific
 ADEUMInstrumentation.framework/
