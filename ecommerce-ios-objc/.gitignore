@@ -17,5 +17,3 @@ DerivedData
 *.xcuserstate
 
 # Project-specific
-ADEUMInstrumentation.framework/
-objc-NSURLSession/ECommerce.plist

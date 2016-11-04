@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ECommerce URL</key>
+	<string>http://162.222.177.193/appdynamicspilot</string>
+	<key>EUM Collector</key>
+	<string>https://mobile.eum-appdynamics.com</string>
+	<key>EUM App Key</key>
+	<string>AD-AAB-AAC-TYE</string>
+	<key>Username</key>
+	<string>aleftik</string>
+	<key>Password</key>
+	<string>aleftik</string>
+</dict>
+</plist>
